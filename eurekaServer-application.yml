@@ -1,0 +1,25 @@
+server:
+  port: 8070
+
+management:
+  endpoints:
+    web:
+      base-path: /
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetchRegistry: false
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
+spring:
+  application:
+    name: eureka # Application name to fetch its specific config from the repository
+
+  config:
+    import:
+    - "https://github.com/arkadip302/server_config.git"
+      
